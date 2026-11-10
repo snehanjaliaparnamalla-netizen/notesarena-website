@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JEE Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+    <a href="index.html" class="logo">
+    <img src="images/NotesArena.png" alt="NotesArena Logo">
+</a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="physics.html">Physics</a>
+        <a href="chemistry.html">Chemistry</a>
+        <a href="mathematics.html">Mathematics</a>
+        <a href="about.html">About Us</a>
+    </div>
+</nav>
+<section class="welcome-section">
+    <h2>Your JEE Preparation, Made Simpler.</h2>
+    <p>
+        Explore chapter-wise notes, important formulas and quick revision
+        resources for Physics, Chemistry and Mathematics.
+    </p>
+    <p class="welcome-tagline">
+        Learn • Practice • Revise • Improve
+    </p>
+</section>
+
+<div class="search-container">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search chapters and notes..."
+    >
+    <button onclick="searchNotes()">Search</button>
+</div>
+
+    <h1>NotesArena</h1>
+
+    <p class="main-tagline">Clear concepts. Better preparation. Your notes. Your preparation. Your progress.</p>
+
+    <h2>Choose Your Subject</h2>
+
+    <div class="subjects">
+
+        <a href="physics.html" class="subject-card">
+
+    <h3>Physics</h3>
+    <p class="chapter-count">7 Chapters</p>
+    <p>Notes, formulas and important concepts.</p>
+    <span>Explore Physics →</span>
+
+</a>
+
+        <a href="chemistry.html" class="subject-card">
+
+    <h3>Chemistry</h3>
+    <p class="chapter-count">9 Chapters</p>
+    <p>Notes, reactions and important concepts.</p>
+    <span>Explore Chemistry →</span>
+
+</a>
+
+        <a href="mathematics.html" class="subject-card">
+
+    <h3>Mathematics</h3>
+    <p class="chapter-count">9 Chapters</p>
+    <p>Notes, formulas and important concepts.</p>
+    <span>Explore Mathematics →</span>
+
+</a>
+
+    </div>
+
+    <section class="features-section">
+    <h2>What You'll Find Here</h2>
+
+    <ul>
+        <li>Chapter-wise study materials for Class 11 JEE.</li>
+        <li>Detailed handwritten notes and explanations.</li>
+        <li>Important formulas and shortcut techniques.</li>
+        <li>Quick revision materials for tests and examinations.</li>
+        <li>Organised resources for Physics, Chemistry and Mathematics.</li>
+    </ul>
+</section>
+
+    <footer>
+    <p>© 2026 JEE Notes Hub | Made for JEE Aspirants</p>
+</footer>
+<script>
+    function searchNotes() {
+        const input = document.getElementById("searchInput");
+        const query = input.value.trim().toLowerCase();
+
+       const pages = {
+    // Home
+    "home": "index.html",
+
+    // Physics
+    "physics": "physics.html",
+    "units and dimensions": "units-and-dimensions.html",
+    "basic mathematics and vectors": "units-and-dimensions.html",
+    "kinematics": "kinematics.html",
+    "newton's laws of motion and friction": "newtons-laws-friction.html",
+    "work energy and power": "work-energy-power.html",
+    "circular motion": "circular-motion.html",
+    "center of mass momentum and collision": "center-of-mass-momentum-collision.html",
+    "rotational dynamics": "rotational-dynamics.html",
+
+    // Chemistry
+    "chemistry": "chemistry.html",
+    "some basic concepts of chemistry": "some-basic-concepts.html",
+    "atomic structure": "atomic-structure.html",
+    "periodic table": "periodic-table.html",
+    "chemical bonding": "chemical-bonding.html",
+    "redox": "redox.html",
+    "gaseous state": "gaseous-state.html",
+    "thermodynamics": "thermodynamics-chemistry.html",
+    "thermochemistry": "thermochemistry.html",
+    "ionic equilibrium": "ionic-equilibrium.html",
+
+    // Mathematics
+    "mathematics": "mathematics.html",
+    "fundamentals of algebra": "fundamentals-of-algebra.html",
+    "sequences and series": "sequences-and-series.html",
+    "quadratic equations": "quadratic-equations.html",
+    "trigonometric ratios and identities": "trigonometric-ratios-identities.html",
+    "trigonometric equations": "trigonometric-equations.html",
+    "solution of triangles": "solution-of-triangles.html",
+    "straight lines": "straight-lines.html",
+    "circles": "circles.html",
+    "permutations and combinations": "permutations-and-combinations.html"
+};
+
+        if (query === "") {
+            alert("Please enter a subject or chapter name.");
+            return;
+        }
+
+        const matchedPage = Object.keys(pages).find(page =>
+    page.includes(query)
+);
+
+if (matchedPage) {
+    window.location.href = pages[matchedPage];
+} else {
+    alert("Sorry, we couldn't find that topic yet. Try another chapter name.");
+}
+    }
+
+    document.getElementById("searchInput").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchNotes();
+        }
+    });
+</script>
+
+</body>
+</html>
